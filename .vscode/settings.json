@@ -7,5 +7,5 @@
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
   },
-  "cSpell.words": ["tailwindcss"]
+  "cSpell.words": ["NEXTAUTH", "tailwindcss"]
 }
