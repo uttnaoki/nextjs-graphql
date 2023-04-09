@@ -6,7 +6,6 @@ generates:
       - schema-ast
   src/generated/resolvers-types.ts:
     schema: 'src/graphql/typeDefs/**/*.graphql'
-    # documents: 'src/graphql/resolvers/**/*.ts'
     plugins:
       - typescript
       - typescript-resolvers
@@ -18,7 +17,13 @@ generates:
         Todo: '@prisma/client#Todo'
       scalars:
         DateTime: string
-      # resolverTypeWrapperSignature: 'Promise<T> | T'
-      #   JSON: 'any'
-      #   JSONObject: 'any'
-      #   Upload: 'any'
+  src/generated/request.ts:
+    schema: 'src/graphql/typeDefs/**/*.graphql'
+    documents: 'src/graphql/typeDefs/**/*.graphql'
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      scalars:
+        DateTime: string
